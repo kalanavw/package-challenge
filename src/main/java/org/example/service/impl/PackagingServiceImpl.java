@@ -33,6 +33,7 @@ public class PackagingServiceImpl implements PackagingService {
      */
     @Override
     public Multimap<String, Item> readFile(String filePath) {
+        // check file is valid or invalid
         if (filePath == null || filePath.isEmpty() || !Files.exists(Paths.get(filePath))) {
             LOGGER.error("File not found::" + filePath);
             throw new PackageException("File not found::" + filePath);
