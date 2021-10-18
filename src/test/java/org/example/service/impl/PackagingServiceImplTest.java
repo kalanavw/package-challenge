@@ -35,6 +35,7 @@ class PackagingServiceImplTest {
 
     @BeforeEach
     void setUp() {
+        //setup the paths
         Path resourceDirectory = Paths.get("src", "test", "resources");
         String absolutePath = resourceDirectory.toFile().getAbsolutePath();
         this.invalidPackageWeightFile = absolutePath + File.separator + "invalidPackageWeightFile.txt";
