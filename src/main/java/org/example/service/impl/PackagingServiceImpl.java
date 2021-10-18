@@ -37,7 +37,7 @@ public class PackagingServiceImpl implements PackagingService {
             LOGGER.error("File not found::" + filePath);
             throw new PackageException("File not found::" + filePath);
         }
-        Multimap<String, Item> packageData = TreeMultimap.create();
+        Multimap<String, Item> packageData = TreeMultimap.create(); //multi-map for duplicating the key
         try (Stream<String> fileStream = Files.lines(Paths.get(filePath), StandardCharsets.UTF_8)) {
             fileStream
                     .filter(Objects::nonNull)
