@@ -94,8 +94,8 @@ public class PackagingServiceImpl implements PackagingService {
     /**
      * method for processing items against the requirement
      * find items that match the package by item cost and item weight
-     *
-     * @param packageData
+     *  
+     * @param Multimap<String, Item> packageData
      * @return Map with selected items
      */
     @Override
